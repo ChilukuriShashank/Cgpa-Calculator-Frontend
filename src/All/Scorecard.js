@@ -10,7 +10,7 @@ const ScoreCard = () => {
   useEffect(() => {
     const fetchStudentById = async () => {
       try {
-        const st = await axios.get(`http://localhost:5000/getstudentbyid/${id}`);
+        const st = await axios.get(`https://cgpacalculator-backend.vercel.app/getstudentbyid/${id}`);
         console.log(st.data);
         setStudent(st.data);
       } catch (error) {
