@@ -33,7 +33,7 @@ const Viewall = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/getall');
+      const response = await axios.get('https://cgpacalculator-backend.vercel.app/getall');
       setCourses(response.data);
     } catch (error) {
       console.error('Error fetching courses:', error);
@@ -47,7 +47,7 @@ const Viewall = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/delete/${id}`);
+      await axios.delete(`https://cgpacalculator-backend.vercel.app/delete/${id}`);
       setMessage('Course deleted successfully');
       fetchCourses(); // Refresh course list after deletion
     } catch (error) {
